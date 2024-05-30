@@ -1,0 +1,35 @@
+# The SRV protocol allows for automatic discovery of the servers in a MongoDB replica set or sharded cluster, without the need to specify the individual server addresses. 
+
+What is tox?
+Tox is a tool that creates virtual environments, and installs the configured dependencies for those environments, for the purpose of testing a Python package (i.e. something that will be shared via PyPi, and so it only works with code that defines a setup.py).
+PyPi == Python Package Index (i.e. where you typically install all your Python packages from, when executing pip install).
+The file that you use to configure tox can be one of the following…
+1.tox.ini
+2.pyproject.toml (see PEP 518)
+3.setup.cfg (see official guide to distributing packages)
+Note: these ^^ are all ini file formats – which is information that will become more relevant/important later on.
+#What the tox authors mean by that description, is that the tox command itself is used to handle testing your packages, while the tox.ini configuration file is just one such file that can be used to contain configuration information.
+This is why other packages, such as Flake8 allow you to configure Flake8 using the tox.ini file, as well as alternatives such as: setup.cfg or .flake8.
+The key to understanding why this works is as follows: each of these files conform to the ini file format. So you’re free to use whatever file name you feel best suits your project, while the format of the file will stay consistent to what is expected of an .ini file.
+
+
+#setup.cfg/setup.py are for building distributions,
+#tox.ini is for running tests in on-the-fly created virtual environments; tox of course uses setuptools to build a distribution and install it into these virtual environments before running tests.
+
+#What even is a Python project?
+At the very heart a single executable Python file is enough.
+If you want to make the project being installable, you need configuration file for the build system.
+While a lot has changed over time, still setup.py is the most prominent one. At some point in time it was figured out, that it may be not such a great idea that the build configuration file could execute arbitrary code, so setup.cfg was invented, where you can define e.g. the projects name and dependencies in a ini-style format. Meanwhile, another format was invented, the pyproject.toml file.
+So basically, to build your project you need one of those:
+1.setup.py
+2.setup.py and setup.cfg (the former only calls the latter)
+3.pyproject.toml
+Usually you want to write tests for your project. You could use the builtin unittest testrunner to run your tests, or nowadays many projects use pytest. pytest can be configured with a pytest.ini.
+Tests usually need some dependencies, e.g. pytest itself and maybe some other test helpers. They need to be installed at some time.
+And here comes tox into play. Amongst many other features, like e.g. running your tests against different Python versions, tox can both install your project and your test requirements and execute the tests. tox usually comes with a tox.ini file.
+Oh, and what about linting? You want to have easy to read code and follow the Python guidelines (e.g. PEP 8), so you usually use a tool like flake8 - which also comes with its own configuration file, namely .flake8.
+Ok, now we have many tools and many configuration files, but that's not all. As not everybody likes so many configuration files, some of the tools support to be configured with other tools's configuration file.
+e.g. you can configure flake8 both in a setup.cfg and a tox.ini, see https://flake8.pycqa.org/en/latest/user/configuration.html
+You can also configure tox via setup.cfg or pyproject.toml, see https://tox.readthedocs.io/en/latest/config.html#configuration-discovery
+And one important thing to know: You only need to configure your tool once, not in all those files.
+So, technically, you do not need all those files, and it is up to you what you think is an easy to read and easy to manage setup for your project.

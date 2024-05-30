@@ -1,0 +1,25 @@
+pymongo
+pymongo[srv]
+dnspython
+pandas
+numpy
+ensure
+
+-e .
+
+# since this is for our local development environment
+# we will mention testing packages here too
+
+# testing requiremnets
+
+pytest==7.1.3
+tox==3.25.1
+black==22.8.0
+flake8==5.0.4
+mypy==0.971
+
+# The SRV protocol allows for automatic discovery of the 
+#servers in a MongoDB replica set or sharded cluster, 
+#without the need to specify the individual server addresses. 
+#ensure is a set of simple assertion helpers that let you write 
+#more expressive, literate, concise, and readable Pythonic code for validating conditions.
