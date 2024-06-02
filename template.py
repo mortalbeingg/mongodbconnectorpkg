@@ -12,7 +12,8 @@ import logging
 # we write shell script, i.e. linux commands inside this file
 # instead of writing it one by one, we unify the commnds
 # and can directly run all of them together by just running the .sh file
-# tox.ini : it is for testing diff cases
+# tox.ini : it is for testing diff cases or testing our code
+# in different environments
 # in our local development environment
 
 
