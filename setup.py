@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 from typing import List
 
 
-##with open("README.md", "r", encoding="utf-8") as f:
-#  long_desc = f.read()
+with open("README.md", "rb", encoding="CP437") as f:
+    long_desc = f.read()
 
 __version__ = "0.0.1"
 REPO_NAME = "mongodbconnectorpkg"
@@ -18,7 +18,7 @@ setup(
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
     description="A python package for connecting with a database",
-    long_description="important package",
+    long_description=long_desc,
     long_description_content_type="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
     project_urls={
