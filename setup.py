@@ -1,6 +1,9 @@
 from setuptools import setup, find_packages
 from typing import List
 
+HYPHEN_E_DOT = "-e ."
+
+
 with open("README.md", "r", encoding="utf-8") as f:
     long_desc = f.read()
 
