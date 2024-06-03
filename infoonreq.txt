@@ -33,3 +33,25 @@ e.g. you can configure flake8 both in a setup.cfg and a tox.ini, see https://fla
 You can also configure tox via setup.cfg or pyproject.toml, see https://tox.readthedocs.io/en/latest/config.html#configuration-discovery
 And one important thing to know: You only need to configure your tool once, not in all those files.
 So, technically, you do not need all those files, and it is up to you what you think is an easy to read and easy to manage setup for your project.
+
+# The SRV protocol allows for automatic discovery of the 
+#servers in a MongoDB replica set or sharded cluster, 
+#without the need to specify the individual server addresses. 
+#ensure is a set of simple assertion helpers that let you write 
+#more expressive, literate, concise, and readable Pythonic code for validating conditions.
+
+#Mypy has a powerful and easy-to-use type system, supporting features such as type inference, 
+#generics, callable types, tuple types, union types, structural subtyping and more. 
+#Using mypy will make your programs easier to understand, debug, and maintain.
+#Mypy is essentially a Python linter on steroids, and it can catch many programming errors
+#by analyzing your program, without actually having to run it. Mypy has a powerful type system with features such as type inference, gradual typing, generics and union types.
+
+#Black is a Python code formatter that automatically reformats Python code according to a predefined set of rules.
+#It follows the philosophy of “uncompromisingly strict” formatting, which means that it enforces a specific style and does not allow any configuration options.
+
+#Flake8 is a Python linting tool that checks your Python codebase for errors, styling issues and complexity. The Flake8 library is built upon 3 tools:
+#PyFlakes - checks your Python codebase for errors
+#McCabe - checks your Python codebase for complexity
+#pycodestyle - checks your Python codebase for styling issues against PEP8.
+
+#ensure is a set of simple assertion helpers that let you write more expressive, literate, concise, and readable Pythonic code for validating conditions.
