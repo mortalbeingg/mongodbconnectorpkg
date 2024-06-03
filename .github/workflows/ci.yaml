@@ -33,7 +33,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: set environment variable
-      run: echo "PYTHONIOENCODING = utf-8" | Out-File -FilePath $env:GITHUB_ENV -Append
+      run: echo "PYTHONIOENCODING = utf-8" | Out-File -FilePath $env:$GITHUB_ENV -Append
       if: runner.os == 'Windows'
 
     - name: Install dependencies
