@@ -32,10 +32,10 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-    - name: workaround for unicodedecodeerror from tox on windows
-      if: startsWith(runner.os, 'windows')
-      shell: bash
-      run: echo "PYTHONIOENCODING=utf-8" >> $GITHUB_ENV
+    - name: set environment variable
+      run: echo "PYTHONUTF8 = 1" | Out-File -FilePath $env:GITHUB_ENV -Append
+      if: runner.os == 'Windows'
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
