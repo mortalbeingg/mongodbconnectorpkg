@@ -12,7 +12,7 @@ class mongo_operation:
 
     -----
     PARAMS:
-    client_url : The client url that you get from mongodb web page
+    client_uri : The client uri that you get from mongodb web page
     database_name : The database that one wants to connect to
     collection_name : The name of the collection that one wanta to connect to
     """
@@ -21,16 +21,16 @@ class mongo_operation:
     __database = None  # a variable that will be storing the databse name
 
     def __init__(
-        self, client_url: str, database_name: str, collection_name: str = None
+        self, client_uri: str, database_name: str, collection_name: str = None
     ):
-        self.client_url = client_url
+        self.client_uri = client_uri
         self.database_name = database_name
         self.collection_name = collection_name
 
     @property
     def create_mongo_client(self):
 
-        client = pymongo.MongoClient(self.client_url)
+        client = pymongo.MongoClient(self.client_uri)
         return client
 
     @property
