@@ -17,29 +17,4 @@ black==22.8.0
 flake8==5.0.4
 mypy==0.971
 
-
-
-<<<<<<< HEAD
-=======
-# The SRV protocol allows for automatic discovery of the 
-#servers in a MongoDB replica set or sharded cluster, 
-#without the need to specify the individual server addresses. 
-#ensure is a set of simple assertion helpers that let you write 
-#more expressive, literate, concise, and readable Pythonic code for validating conditions.
-
-#Mypy has a powerful and easy-to-use type system, supporting features such as type inference, 
-#generics, callable types, tuple types, union types, structural subtyping and more. 
-#Using mypy will make your programs easier to understand, debug, and maintain.
-#Mypy is essentially a Python linter on steroids, and it can catch many programming errors
-#by analyzing your program, without actually having to run it. Mypy has a powerful type system with features such as type inference, gradual #typing, generics and union types.
-
-#Black is a Python code formatter that automatically reformats Python code according to a predefined set of rules.
-#It follows the philosophy of “uncompromisingly strict” formatting, which means that it enforces a specific style and does not allow any #configuration options.
-
-#Flake8 is a Python linting tool that checks your Python codebase for errors, styling issues and complexity. The Flake8 library is built #upon 3 tools:
-#PyFlakes - checks your Python codebase for errors
-#McCabe - checks your Python codebase for complexity
-#pycodestyle - checks your Python codebase for styling issues against PEP8.
-
-#ensure is a set of simple assertion helpers that let you write more expressive, literate, concise, and readable Pythonic code for #validating conditions.
->>>>>>> 75021cc9fe0d2a7b5caf8cc9c104468cecad4037
+-e .
