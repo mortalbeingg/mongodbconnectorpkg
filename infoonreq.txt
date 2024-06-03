@@ -77,3 +77,8 @@ So, technically, you do not need all those files, and it is up to you what you t
 #pycodestyle - checks your Python codebase for styling issues against PEP8.
 
 #ensure is a set of simple assertion helpers that let you write more expressive, literate, concise, and readable Pythonic code for #validating conditions.
+
+# In this project, we have written nothing inside function definitions
+# for testing. But if we do, tox uses pytest to run those
+# test cases specified by us when we execute tox, and this
+# entire process is automated
