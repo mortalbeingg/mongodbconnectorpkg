@@ -33,7 +33,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: workaround for unicodedecodeerror from tox on windows
-      if: startsWuth(runner.os, 'windows')
+      if: startsWith(runner.os, 'windows')
       shell: bash
       run: echo "PYTHONIOENCODING=utf-8" >> $GITHUB_ENV
     - name: Install dependencies
